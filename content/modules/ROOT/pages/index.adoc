@@ -1,18 +1,9 @@
-= {Red Hat Discovery tool}
+= Red Hat Discovery tool
 
-The Red Hat Discovery is a software tool designed to help organizations identify and manage their Red Hat software assets. It's an agentless inspection and reporting tool, meaning you don't need to install any software on the systems you're scanning. It works by using an SSH connection or Username and password to collect information about the Red Hat products running on physical machines, virtual machines, or containers. With this lab the intention is to show the capabilities of the tool and try the scan on different Products/Environment.
+The Red Hat Discovery is a software tool designed to help organizations identify and manage their Red Hat software assets. It's an agentless inspection and reporting tool, meaning you don't need to install any software on the systems you're scanning. It works by using an SSH connection or Username and password to collect information about the Red Hat products running on physical machines, virtual machines, or containers. With this lab the intention is to show the capabilities of the tool and try the scan on different Products/Environment. Starting from setting up the scan ending with running the scan and produce the inventory report.
 
 image::rhel-logo-black.jpg[rhel-logo-black,55%,55%]
 
-== Variables
-
-Other vars can also be set there, such as `ssh_user` and `ssh_password`, and referenced inline in the lab content by using the `\{foo}` syntax.
-
-This is another var, or asciidoc attribute, from `./content/antora.yml` {my_var}
-
-== Writing your lab
-
-Whatever type of content you are writing we'll refer to your *content* as "your lab" in this document.
 
 === Lab structure
 
