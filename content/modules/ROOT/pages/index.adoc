@@ -1,7 +1,6 @@
-= {lab_name}
+= {Red Hat Discovery tool}
 
-The `lab_name` var, known as an asciidoc attribute, above was set in `./content/antora.yml` and can be used to set the lab_name or title of your content.
-You are both free to change its value and if you prefer to use a different var name, you can change the value of `lab_name`, for example to `title` in `./content/antora.yml` and then reference it in your content as `\{title}`. +
+The Red Hat Discovery is a software tool designed to help organizations identify and manage their Red Hat software assets. It's an agentless inspection and reporting tool, meaning you don't need to install any software on the systems you're scanning. It works by using an SSH connection or Username and password to collect information about the Red Hat products running on physical machines, virtual machines, or containers. With this lab the intention is to show the capabilities of the tool and try the scan on different Products/Environment.
 
 image::rhel-logo-black.jpg[rhel-logo-black,55%,55%]
 
