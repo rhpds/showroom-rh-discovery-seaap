@@ -5,29 +5,32 @@ The Red Hat Discovery is a software tool designed to help organizations identify
 image::rhel-logo-black.jpg[rhel-logo-black,55%,55%]
 
 
-=== Lab structure
+=== Environment
 
-Wether you are writing a lab
+The environment is composed by:
 
-* First, we will build a monolithic application already compiled as RPM packages and put it into a container. This will allow us to deploy the application, copy it between machines, and update it separately from the operating system. This process affords us a portable and easily maintained component instead of tightly coupling the application with your operating system maintenance.
+* Red Hat Ansible Automation Platform 2.5
+* Red Hat OpenShift 4.19 (SNO)
+* Red Hat Satellite 6.17
+* Red Hat Enterprise Linux (This is the bastion where the Discovery tool is already preinstalled)
+** RHEL 9 node (x1)
+** RHEL 8 node (x1)
+** RHEL 7 node (x1)
 
-* In closing we will build a second container on a different operating system version that makes an application not packaged into RPMs. This will be similar to a web application deployment, positioning the correct files at the right locations. To do this, we will pull a project from GitHub and position the component files within our container image. The purpose of this is to achieve a portable application container that can deploy on several different versions of Red Hat Enterprise Linux. This also provides the benefit of decoupling your application maintenance, which would all happen by building new containers versus operating system maintenance. The container is no longer reliant on the operating system installed on the machine where the application is deployed.
 
-. Now let's examine this cluster a bit more by describing the cluster (the `$GUID` environment variable is already set for you so you can immediately describe your individual cluster):
-+
-[source,sh,role=execute]
-----
-podman ps
-----
-+
-.Sample Output
-[source,texinfo,subs="attributes"]
-----
-CONTAINER ID  IMAGE                        COMMAND           CREATED      STATUS      PORTS                 NAMES
-2dcfee9e50c4  docker.io/library/httpd:2.4  httpd-foreground  3 hours ago  Up 3 hours  0.0.0.0:8080->80/tcp  showroom-httpd
-----
+=== Lab Structure
 
-=== Lab Access
+Once the lab is ready to start, first thing to check is that the containers of the Discovery are up and running.
 
-The terminal window to your right is *already* logged into the lab environment as the `{ssh_user}` user via `ssh`. 
-All steps of this lab are to be completed as the `{ssh_user}` user.
+podman ps -a
+
+Output should be similar to:
+
+CONTAINER ID  IMAGE                                                     COMMAND               CREATED             STATUS             PORTS                                       NAMES
+22de3bb98ccd  registry.redhat.io/rhel9/redis-7:latest                   run-redis             2 minutes ago       Up 2 minutes       6379/tcp                                    discovery-redis
+804b7c16c121  registry.redhat.io/rhel9/postgresql-15:latest             run-postgresql        2 minutes ago       Up 2 minutes       5432/tcp                                    discovery-db
+e522f1112fc5  registry.redhat.io/discovery/discovery-server-rhel9:1.14  /bin/bash /deploy...  About a minute ago  Up About a minute  8000/tcp                                    discovery-server
+c5fba26a6613  registry.redhat.io/discovery/discovery-server-rhel9:1.14  /bin/sh -c /deplo...  About a minute ago  Up About a minute  8000/tcp                                    discovery-celery-worker
+047f2ce63c8f  registry.redhat.io/discovery/discovery-ui-rhel9:1.14      /bin/bash /opt/ap...  About a minute ago  Up About a minute  0.0.0.0:9443->9443/tcp, 8080/tcp, 8443/tcp  discovery-app
+
+Once done that the setting up of the scan can start.
