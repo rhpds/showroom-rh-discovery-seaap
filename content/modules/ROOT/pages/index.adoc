@@ -33,4 +33,4 @@ e522f1112fc5  registry.redhat.io/discovery/discovery-server-rhel9:1.14  /bin/bas
 c5fba26a6613  registry.redhat.io/discovery/discovery-server-rhel9:1.14  /bin/sh -c /deplo...  About a minute ago  Up About a minute  8000/tcp                                    discovery-celery-worker
 047f2ce63c8f  registry.redhat.io/discovery/discovery-ui-rhel9:1.14      /bin/bash /opt/ap...  About a minute ago  Up About a minute  0.0.0.0:9443->9443/tcp, 8080/tcp, 8443/tcp  discovery-app
 
-Once done that the setting up of the scan can start. 
+Once done that the setting up of credentials and sources can start. 
