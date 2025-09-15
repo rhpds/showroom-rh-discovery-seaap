@@ -21,11 +21,11 @@ The environment is composed by:
 === Lab Structure
 
 Once the lab is ready to start, first thing to check is that the containers of the Discovery are up and running.
-
+[source,bash]
 podman ps -a
 
 Output should be similar to:
-
+[source,textinfo]
 CONTAINER ID  IMAGE                                                     COMMAND               CREATED             STATUS             PORTS                                       NAMES
 22de3bb98ccd  registry.redhat.io/rhel9/redis-7:latest                   run-redis             2 minutes ago       Up 2 minutes       6379/tcp                                    discovery-redis
 804b7c16c121  registry.redhat.io/rhel9/postgresql-15:latest             run-postgresql        2 minutes ago       Up 2 minutes       5432/tcp                                    discovery-db
