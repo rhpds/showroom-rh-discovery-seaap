@@ -8,7 +8,7 @@ To prepare Discovery to run scans, you must add the parts of your IT infrastruct
 
 Here the official documentation on how to setup the credentials and sources for each type of scan: https://docs.redhat.com/en/documentation/subscription_central/1-latest/html-single/using_red_hat_discovery/index#assembly-adding-net-sources-creds-gui
 
-
+In general you will be asked to insert information about the hosts and environments that you will find in the services tab of the SEAP Discovery environment that you just ordered.
 
 == Launching the Scan   
 
