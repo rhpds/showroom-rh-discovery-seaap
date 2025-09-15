@@ -4,6 +4,14 @@
 
 To prepare Discovery to run scans, you must add the parts of your IT infrastructure that you want to scan as one or more sources. You must also add the authentication information, such as a username and password or SSH key, that is required to access those sources as one or more credentials. Because of differing configuration requirements, you add sources and credentials according to the type of source that you are going to scan
 
+== LAB Purpose
+
+With this Environment you will be able to practice different types of scan, specifically:
+- Network scan (you can use either Username and Password or SSH Keys auth), scan the three machines provisioned (RHEL 7, RHEL 8, RHEL 9)
+- Satellite scan (the three machines are already registered to the Satellite)
+- Openshift scan (One node OCP cluster)
+- Ansible scan (Pay attention in this case the controller have a different API, therefore it works with 8443 port), it is specified in the Demo services page
+
 == How to add credentials and sources
 
 Here the official documentation on how to setup the credentials and sources for each type of scan: https://docs.redhat.com/en/documentation/subscription_central/1-latest/html-single/using_red_hat_discovery/index#assembly-adding-net-sources-creds-gui
@@ -21,3 +29,7 @@ Once a Scan is launched, it will appear in the scan tab menu of the UI.
 Once a scan finalize, it will appear with a green tick (meaning successful scan) in the scan tab of the UI.
 On that line you will need to click on the three dots that are on the right side of the scan line and click on Download.
 A folder will be stored locally in your Discovery machine with inside the invetory reports that the Discovery created.
+
+== Check and data analisys
+
+Now that we obtained the report we wanted we can open the "deployments" csv file and see what data was captured.
