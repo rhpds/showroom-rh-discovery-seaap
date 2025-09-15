@@ -4,21 +4,12 @@
 
 To prepare Discovery to run scans, you must add the parts of your IT infrastructure that you want to scan as one or more sources. You must also add the authentication information, such as a username and password or SSH key, that is required to access those sources as one or more credentials. Because of differing configuration requirements, you add sources and credentials according to the type of source that you are going to scan
 
-== Adding network credentials and source
-Click the option to add a new credential based on your location:
+== How to add credentials and sources
 
-From the Credentials view, click Add → Network Credential.
-From the Add Source wizard, click the Add a credential icon for the Credentials field.
-The Add Credential wizard opens.
+Here the official documentation on how to setup the credentials and sources for each type of scan: https://docs.redhat.com/en/documentation/subscription_central/1-latest/html-single/using_red_hat_discovery/index#assembly-adding-net-sources-creds-gui
 
-In the Credential Name field, enter a descriptive name.
-In the Authentication Type field, select the type of authentication that you want to use. You can select either Username and Password or SSH Key.
-Enter the authentication data in the appropriate fields, based on the authentication type.
 
-For username and password authentication, enter a username and password for a user. This user must have root-level access to your network or to the subset of your network that you want to scan. Alternatively, this user must be able to obtain root-level access with the selected become method.
-For SSH key authentication, enter a username and paste the contents of the ssh keyfile. Entering a passphrase is optional.
-Enter the become method for privilege elevation. Privilege elevation is required to run some commands during a network scan. Entering a username and password for the become method is optional.
-Click Save to save the credential and close the Add Credential wizard.
+
 == Installing Software
 
 
