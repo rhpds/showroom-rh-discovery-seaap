@@ -26,7 +26,7 @@ The environment is composed by:
 ----
 podman ps -a
 ----
-
++
 .Output should be similar to:
 [source,textinfo]
 ----
