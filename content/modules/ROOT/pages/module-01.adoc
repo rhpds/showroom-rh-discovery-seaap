@@ -4,7 +4,7 @@
 
 To prepare Discovery to run scans, you must add the parts of your IT infrastructure that you want to scan as one or more sources. You must also add the authentication information, such as a username and password or SSH key, that is required to access those sources as one or more credentials. Because of differing configuration requirements, you add sources and credentials according to the type of source that you are going to scan
 
-== LAB Purpose
+== Demo Purpose
 
 With this Environment you will be able to practice different types of scan, specifically:
 

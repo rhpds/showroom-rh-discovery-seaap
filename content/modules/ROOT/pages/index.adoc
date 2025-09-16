@@ -1,6 +1,6 @@
 = Red Hat Discovery tool
 
-The Red Hat Discovery is a software tool designed to help organizations identify and manage their Red Hat software assets. It's an agentless inspection and reporting tool, meaning you don't need to install any software on the systems you're scanning. It works by using an SSH connection or Username and password to collect information about the Red Hat products running on physical machines, virtual machines, or containers. With this lab the intention is to show the capabilities of the tool and try the scan on different Products/Environment. Starting from setting up the scan ending with running the scan and produce the inventory report.
+The Red Hat Discovery is a software tool designed to help organizations identify and manage their Red Hat software assets. It's an agentless inspection and reporting tool, meaning you don't need to install any software on the systems you're scanning. It works by using an SSH connection or Username and password to collect information about the Red Hat products running on physical machines, virtual machines, or containers. With this demo the intention is to show the capabilities of the tool and try the scan on different Products/Environment. Starting from setting up the scan ending with running the scan and produce the inventory report.
 
 image::rhel-logo-black.jpg[rhel-logo-black,55%,55%]
 
@@ -18,9 +18,9 @@ The environment is composed by:
 ** RHEL 7 node (x1)
 
 
-== Lab Structure
+== demo Structure
 
-* Once the lab is ready to start, first thing to check is that the containers of the Discovery are up and running.
+* Once the demo is ready to start, first thing to check is that the containers of the Discovery are up and running.
 +
 [source,bash]
 ----
